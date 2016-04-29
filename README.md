@@ -98,7 +98,7 @@ Now that the `edit` view template will have access to the `@post` object, we nee
 This will now populate the form, but if you tried to submit the form you may notice that it's redirecting to the show page and not changing the values. Notice how the `post_path` route helper method is used for the `show`, `update`, `edit`, and `delete` method? How can we let the app know that we want to use the `update` method in this case? We need to first make a change to the form so that it knows what route the data should be passed through as well as what HTTP verb needs to be called, make the following change to the `form_tag` line:
 
 ```erb
-<%= form_tag posts_id_path(@post), method: "put" do %>
+<%= form_tag posts_path(@post), method: "put" do %>
 ```
 
 By explicitly stating the route and method, the form will now be routed to the `update` action. Before we try to implement the `update` action, let's first make sure the data is being routed properly. Enter the following code inside of the `update` method:
