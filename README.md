@@ -110,10 +110,10 @@ with the corresponding data from `@post`. We'll also use a different form helper
 
 <%= form_for @post do |f| %>
   <%= f.label 'Post Title' %><br>
-  <%= f.text_field :title %><br>
+  <%= f.text_field_tag :title %><br>
 
   <%= f.label 'Post Description' %><br>
-  <%= f.text_area :description %><br>
+  <%= f.text_area_tag :description %><br>
 
   <%= f.submit "Submit Post" %>
 <% end %>
